@@ -15,10 +15,10 @@ export const TOKEN_CONFIG = {
   tokenomics: {
     totalSupply: '1,000,000,000',
     tax: '0% Buy / 0% Sell',
-    lpStatus: 'Burned & Immutable',
+    lpStatus: 'Burned in Raydium',
     mintAuthority: 'Revoked',
     freezeAuthority: 'Revoked',
-    deployerKey: '100% Publicly Distributed',
+    deployerKey: '100% Shared with Community',
   },
   lore: {
     title: "I'M GIVING EVERYONE THE PRIVATE KEY.",

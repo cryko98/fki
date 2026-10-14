@@ -8,7 +8,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { KeyVault } from './components/KeyVault';
 import { LoreSection } from './components/LoreSection';
-import { DevSimulator } from './components/DevSimulator';
+import { MemeStats } from './components/MemeStats';
 import { Tokenomics } from './components/Tokenomics';
 import { LiveChart } from './components/LiveChart';
 import { CommunityStrip } from './components/CommunityStrip';
@@ -32,13 +32,13 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070e1c] text-slate-100 flex flex-col selection:bg-sky-500 selection:text-white font-sans">
-      <Navbar onNotify={handleNotify} />
+    <div className="min-h-screen bg-[#071d3d] text-white flex flex-col selection:bg-amber-400 selection:text-slate-950 font-sans">
+      <Navbar />
       <main className="flex-1">
         <Hero onNotify={handleNotify} />
         <KeyVault onNotify={handleNotify} />
         <LoreSection onNotify={handleNotify} />
-        <DevSimulator onNotify={handleNotify} />
+        <MemeStats onNotify={handleNotify} />
         <Tokenomics />
         <LiveChart />
         <CommunityStrip />

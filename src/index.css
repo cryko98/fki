@@ -11,31 +11,64 @@
   }
 
   body {
-    background-color: #070e1c;
-    color: #f1f5f9;
+    background-color: #0b2247;
+    color: #ffffff;
     font-family: var(--font-sans);
   }
 }
 
-/* Custom low-poly & sky aesthetic effects */
-.sky-gradient-mesh {
-  background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.28) 0%, rgba(3, 105, 161, 0.12) 35%, rgba(7, 14, 28, 0.95) 75%);
+/* Bright Solana Sky & Cloud Aesthetic matching the reference image */
+.sky-bg {
+  background: radial-gradient(circle at 50% 15%, #29a0ff 0%, #0d72d6 45%, #083c79 85%, #051d3b 100%);
 }
 
-.cloud-glow {
-  filter: drop-shadow(0 10px 30px rgba(56, 189, 248, 0.25));
+.cloud-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.shiba-gold-glow {
-  box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.35);
+.cloud-card-bright {
+  background: rgba(255, 255, 255, 0.95);
+  color: #082852;
 }
 
-.cyan-hud-border {
-  border: 1px solid rgba(56, 189, 248, 0.22);
+.meme-badge {
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
-.cyan-hud-border:hover {
-  border-color: rgba(56, 189, 248, 0.5);
+/* Cartoonish floating animation for clouds & flying doge */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes cloudDrift {
+  0% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(5%);
+  }
+}
+
+.float-animation {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.cloud-drift-1 {
+  animation: cloudDrift 18s ease-in-out infinite alternate;
+}
+
+.cloud-drift-2 {
+  animation: cloudDrift 24s ease-in-out infinite alternate-reverse;
 }
 
 /* Custom scrollbar */
@@ -43,12 +76,9 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #070e1c;
+  background: #08244c;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e3a5f;
+  background: #38bdf8;
   border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #0284c7;
 }
