@@ -6,7 +6,7 @@ export const TOKEN_CONFIG = {
   privateKey: '3ZLSYQ9gH1ZfvAas8Zqp7qPX5n92B7UAHV1qSVFe5Y17bMgYc8Np6bu6oetGfY83fFXStE8PMRcejmh98rc5861x',
   links: {
     pumpFun: 'https://pump.fun/coin/FEDrYxfxDm2g9TgMsu5NPPp8KL9Atjnw6TTpoMTqpump',
-    dexScreener: 'https://dexscreener.com/solana/FEDrYxfxDm2g9TgMsu5NPPp8KL9Atjnw6TTpoMTqpump',
+    dexScreener: 'https://dexscreener.com/solana/4ycctnTUPPhtuhSdSFx523GLtAvZCUPGGQryLKhM6PnH',
     solscan: 'https://solscan.io/token/FEDrYxfxDm2g9TgMsu5NPPp8KL9Atjnw6TTpoMTqpump',
     raydium: 'https://raydium.io/swap/?inputMint=sol&outputMint=FEDrYxfxDm2g9TgMsu5NPPp8KL9Atjnw6TTpoMTqpump',
     twitter: 'https://x.com/search?q=%24FKI%20solana',

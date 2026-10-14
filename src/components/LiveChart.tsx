@@ -5,7 +5,6 @@ import { playClickSound } from '../utils/audio';
 
 export function LiveChart() {
   const [solAmount, setSolAmount] = useState('1');
-  const [showEmbed, setShowEmbed] = useState(false);
 
   const numSol = parseFloat(solAmount) || 0;
   const estimatedTokens = Math.floor(numSol * 38250000).toLocaleString();
@@ -15,18 +14,18 @@ export function LiveChart() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 text-center mx-auto">
+        <div className="max-w-3xl mb-14 text-center mx-auto">
           <div className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-300 mb-3 font-mono">
             <TrendingUp className="w-4 h-4 text-sky-300" />
-            <span>Real-Time Execution</span>
+            <span>Official Pair Chart</span>
             <span aria-hidden="true" className="text-sky-400/40">/</span>
-            <span>Solana Order Flow</span>
+            <span>Real-Time Execution</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight uppercase leading-tight text-balance">
-            LIVE CHART & SWAP ESTIMATOR
+            LIVE DEXSCREENER CHART
           </h2>
           <p className="mt-4 text-sky-100 text-base sm:text-lg leading-relaxed">
-            Track real-time transactions on Pump.fun or estimate your $FKI allocation.
+            Live Solana trading candles and liquidity pool metrics for Flying Ketamine Inu ($FKI).
           </p>
         </div>
 
@@ -39,21 +38,12 @@ export function LiveChart() {
                 <span className="font-mono text-xs font-bold text-white tracking-wide">
                   DEXSCREENER CHART FEED
                 </span>
-                <span className="font-mono text-xs text-amber-300">
-                  FKI / SOL
+                <span className="font-mono text-xs text-amber-300 font-bold">
+                  4ycctnT...PnH
                 </span>
               </div>
 
               <div className="flex items-center gap-2">
-                <button
-                  onClick={() => {
-                    playClickSound();
-                    setShowEmbed(!showEmbed);
-                  }}
-                  className="px-3.5 py-1.5 text-xs font-bold text-sky-100 hover:text-white bg-sky-900/80 hover:bg-sky-800 rounded-xl transition-colors cursor-pointer border border-sky-400/30"
-                >
-                  {showEmbed ? 'Show Minimal Feed' : 'Load Interactive Chart'}
-                </button>
                 <a
                   href={TOKEN_CONFIG.links.dexScreener}
                   target="_blank"
@@ -61,62 +51,29 @@ export function LiveChart() {
                   onClick={() => playClickSound()}
                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 rounded-xl transition-colors shadow-sm"
                 >
-                  <span>DexScreener</span>
+                  <span>Open on DexScreener</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>
 
-            {/* Chart Container */}
-            <div className="relative w-full h-[460px] bg-slate-950 flex items-center justify-center">
-              {showEmbed ? (
-                <iframe
-                  src={`https://dexscreener.com/solana/${TOKEN_CONFIG.contractAddress}?embed=1&theme=dark&trades=0&info=0`}
-                  title="DexScreener Chart"
-                  className="w-full h-full border-0"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="p-8 text-center max-w-md">
-                  <div className="w-14 h-14 rounded-2xl bg-sky-500/10 border-2 border-sky-400/30 text-amber-300 flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-7 h-7" />
-                  </div>
-                  <h3 className="text-xl font-black text-white uppercase mb-2">
-                    Live $FKI Trading Pair
-                  </h3>
-                  <p className="text-xs text-sky-200 leading-relaxed mb-6">
-                    Token is trading actively on the Solana bonding curve. Click below to load the live candlestick chart or swap directly on Pump.fun.
-                  </p>
-                  <div className="flex flex-wrap items-center justify-center gap-3">
-                    <button
-                      onClick={() => {
-                        playClickSound();
-                        setShowEmbed(true);
-                      }}
-                      className="px-5 py-2.5 text-xs font-black uppercase tracking-wider text-slate-950 bg-amber-400 hover:bg-amber-300 rounded-xl transition-all cursor-pointer shadow-md"
-                    >
-                      Load Live Chart
-                    </button>
-                    <a
-                      href={TOKEN_CONFIG.links.pumpFun}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-5 py-2.5 text-xs font-black uppercase tracking-wider text-white bg-sky-900 hover:bg-sky-800 rounded-xl border border-sky-400/40 transition-colors"
-                    >
-                      View on Pump.fun
-                    </a>
-                  </div>
-                </div>
-              )}
+            {/* Direct DexScreener Embed as requested */}
+            <div className="relative w-full h-[520px] bg-slate-950 overflow-hidden">
+              <iframe
+                src="https://dexscreener.com/solana/4ycctnTUPPhtuhSdSFx523GLtAvZCUPGGQryLKhM6PnH?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+                title="DexScreener Live Chart"
+                className="w-full h-full border-0"
+                loading="lazy"
+              />
             </div>
 
             <div className="p-3.5 border-t border-sky-400/20 bg-[#072044] font-mono text-[11px] text-sky-200 flex flex-wrap items-center justify-between gap-4">
-              <div>PAIR: FKI / SOL</div>
-              <div className="text-amber-300 font-semibold">RECOMMENDED SLIPPAGE: 0.5% - 2.0%</div>
+              <div>SOLANA PAIR: 4ycctnTUPPhtuhSdSFx523GLtAvZCUPGGQryLKhM6PnH</div>
+              <div className="text-amber-300 font-bold">INTERVAL: 15M · REAL-TIME FEED</div>
             </div>
           </div>
 
-          {/* Right Column: Swap Estimator */}
+          {/* Right Column: Swap Estimator & Direct Trade */}
           <div className="lg:col-span-4 p-6 sm:p-7 rounded-3xl bg-[#0a2e5e] border-2 border-sky-400/30 shadow-xl flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between pb-3 mb-6 border-b border-sky-400/20">
@@ -200,9 +157,19 @@ export function LiveChart() {
                 onClick={() => playClickSound()}
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs font-black uppercase tracking-wider text-slate-950 bg-amber-400 hover:bg-amber-300 active:bg-amber-500 rounded-2xl shadow-xl shadow-amber-400/25 transition-all cursor-pointer"
               >
-                <span>Execute on Pump.fun</span>
+                <span>Trade on Pump.fun</span>
                 <Zap className="w-4 h-4" />
               </a>
+              <div className="text-center mt-3">
+                <a
+                  href={TOKEN_CONFIG.links.dexScreener}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] font-mono text-sky-200 hover:text-amber-300 transition-colors"
+                >
+                  View Pair on DexScreener
+                </a>
+              </div>
             </div>
 
           </div>
