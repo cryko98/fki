@@ -9,7 +9,7 @@ export const TOKEN_CONFIG = {
     dexScreener: 'https://dexscreener.com/solana/4ycctnTUPPhtuhSdSFx523GLtAvZCUPGGQryLKhM6PnH',
     solscan: 'https://solscan.io/token/FEDrYxfxDm2g9TgMsu5NPPp8KL9Atjnw6TTpoMTqpump',
     raydium: 'https://raydium.io/swap/?inputMint=sol&outputMint=FEDrYxfxDm2g9TgMsu5NPPp8KL9Atjnw6TTpoMTqpump',
-    twitter: 'https://x.com/search?q=%24FKI%20solana',
+    twitter: 'https://x.com/tisgambino/status/2110341485405069366',
     telegram: 'https://t.me/FlyingKetamineInuSol',
   },
   tokenomics: {

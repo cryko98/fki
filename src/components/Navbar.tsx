@@ -60,13 +60,6 @@ export function Navbar() {
             Flight Altitude
           </a>
           <a
-            href="#tokenomics"
-            onClick={() => playClickSound()}
-            className="hover:text-amber-300 transition-colors whitespace-nowrap shrink-0"
-          >
-            Tokenomics
-          </a>
-          <a
             href="#chart"
             onClick={() => playClickSound()}
             className="hover:text-amber-300 transition-colors whitespace-nowrap shrink-0"

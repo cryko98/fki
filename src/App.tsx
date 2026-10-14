@@ -9,7 +9,6 @@ import { Hero } from './components/Hero';
 import { KeyVault } from './components/KeyVault';
 import { LoreSection } from './components/LoreSection';
 import { MemeStats } from './components/MemeStats';
-import { Tokenomics } from './components/Tokenomics';
 import { LiveChart } from './components/LiveChart';
 import { CommunityStrip } from './components/CommunityStrip';
 import { Footer } from './components/Footer';
@@ -39,7 +38,6 @@ export default function App() {
         <KeyVault onNotify={handleNotify} />
         <LoreSection onNotify={handleNotify} />
         <MemeStats onNotify={handleNotify} />
-        <Tokenomics />
         <LiveChart />
         <CommunityStrip />
       </main>
