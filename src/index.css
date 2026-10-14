@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #070e1c;
+    color: #f1f5f9;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom low-poly & sky aesthetic effects */
+.sky-gradient-mesh {
+  background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.28) 0%, rgba(3, 105, 161, 0.12) 35%, rgba(7, 14, 28, 0.95) 75%);
+}
+
+.cloud-glow {
+  filter: drop-shadow(0 10px 30px rgba(56, 189, 248, 0.25));
+}
+
+.shiba-gold-glow {
+  box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.35);
+}
+
+.cyan-hud-border {
+  border: 1px solid rgba(56, 189, 248, 0.22);
+}
+
+.cyan-hud-border:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070e1c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
